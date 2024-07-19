@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teachingchannel", "teachingchannel\teachingchannel.csproj", "{B24EE3BD-1AF6-41EC-B7DF-A9D776C02BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frontend", "frontend\frontend.csproj", "{3AB3846E-E39C-4EEC-BBD8-A92DF543B675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24EE3BD-1AF6-41EC-B7DF-A9D776C02BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24EE3BD-1AF6-41EC-B7DF-A9D776C02BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24EE3BD-1AF6-41EC-B7DF-A9D776C02BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24EE3BD-1AF6-41EC-B7DF-A9D776C02BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB3846E-E39C-4EEC-BBD8-A92DF543B675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB3846E-E39C-4EEC-BBD8-A92DF543B675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB3846E-E39C-4EEC-BBD8-A92DF543B675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB3846E-E39C-4EEC-BBD8-A92DF543B675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80C2138F-902E-479C-9F15-B184513668DD}
+	EndGlobalSection
+EndGlobal
