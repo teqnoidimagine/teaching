@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Welcome to your new ASP.NET MVC application.</p>
+
+    <div class="container">
+        <!-- Kendo UI DatePicker -->
+        <label for="datepicker">Select Date:</label>
+        <input id="datepicker" />
+
+        <!-- Kendo UI DropDownList -->
+        <label for="dropdownlist">Select Item:</label>
+        <input id="dropdownlist" />
+
+        <!-- Kendo UI Button -->
+        <button id="kendoButton">Click Me</button>
+
+        <!-- Kendo UI Grid -->
+        <div id="grid"></div>
+
+        <script>$(document).ready(function () {
+                // Initialize Kendo UI DatePicker
+                $("#datepicker").kendoDatePicker();
+
+                // Initialize Kendo UI DropDownList
+                $("#dropdownlist").kendoDropDownList({
+                    dataSource: ["Item 1", "Item 2", "Item 3"],
+                    optionLabel: "Select an item"
+                });
+
+                // Initialize Kendo UI Button
+                $("#kendoButton").kendoButton();
+
+                // Initialize Kendo UI Grid
+                $("#grid").kendoGrid({
+                    dataSource: {
+                        data: [
+                            { Name: "Jane Doe", Age: 30 },
+                            { Name: "John Smith", Age: 25 }
+                        ],
+                        schema: {
+                            model: {
+                                fields: {
+                                    Name: { type: "string" },
+                                    Age: { type: "number" }
+                                }
+                            }
+                        },
+                        pageSize: 10
+                    },
+                    height: 400,
+                    scrollable: true,
+                    sortable: true,
+                    pageable: true,
+                    columns: [
+                        { field: "Name", title: "Name", width: "50%" },
+                        { field: "Age", title: "Age", width: "50%" }
+                    ]
+                });
+            });</script>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="" style="display:flex;gap:40px;color:#41326b">
+        <div style="text-align:left">
+            <div style="font-size:40px">
+                <p>Growing <span><b>Life Long Educators</b></span></p>
+            </div>
+            <p style="font-size:20px;">Our Core Values are what we, as an organization, stand for. They serve as a compass that guides our growth, actions, behaviors, and decision-making processes. We consult these values frequently, evaluate our success in living out these core values regularly, and adapt them as we evolve. We aspire to be an organization that fully expresses these values in our work with our partners, in collaboration with each other, and in partnership with the communities we serve.</p>
+            <p style="font-size:20px">We help educators thrive and perform at their best so their students can, too. We create transformational and sustainable learning experiences for aspiring educators, classroom teachers, and education leaders that optimize outcomes for students in school and beyond.</p>
+        </div>
+
+
+        <img style="border-top-left-radius:20%;border-bottom-right-radius:20%" fetchpriority="high" decoding="async"  src="https://www.teachingchannel.com/wp-content/uploads/2023/02/about-zigzag-image.jpg" class="attachment-large size-large wp-image-1475" alt="Lifelong Educators">
+    </div>
+    <section style="color:#41326b ">
+        <p style="font-size:20px;">Our Core Values are what we, as an organization, stand for. They serve as a compass that guides our growth, actions, behaviors, and decision-making processes. We consult these values frequently, evaluate our success in living out these core values regularly, and adapt them as we evolve. We aspire to be an organization that fully expresses these values in our work with our partners, in collaboration with each other, and in partnership with the communities we serve.</p>
+        <p style="font-size:20px">We help educators thrive and perform at their best so their students can, too. We create transformational and sustainable learning experiences for aspiring educators, classroom teachers, and education leaders that optimize outcomes for students in school and beyond.</p>
+        <p style="font-size:20px;">Our Core Values are what we, as an organization, stand for. They serve as a compass that guides our growth, actions, behaviors, and decision-making processes. We consult these values frequently, evaluate our success in living out these core values regularly, and adapt them as we evolve. We aspire to be an organization that fully expresses these values in our work with our partners, in collaboration with each other, and in partnership with the communities we serve.</p>
+        <p style="font-size:20px">We help educators thrive and perform at their best so their students can, too. We create transformational and sustainable learning experiences for aspiring educators, classroom teachers, and education leaders that optimize outcomes for students in school and beyond.</p>
+    </section>
+
+
+
+
+
+</div>
+<section style="display: flex; margin:5% 0%; color: #41326b;gap:5%;">
+
+    <div style="">
+        <img style=" border-top-right-radius: 130px; width: 650px; height: 100%;" src="https://www.teachingchannel.com/wp-content/uploads/2023/02/about-zigzag-image-2.webp" />
+
+    </div>
+    <div style="width:40% ">
+        <div style="font-size:40px ;" >
+            <p> <span><b>Work with Us</b></span></p>
+        </div>
+        <div style="font-size:20px">
+            <p> Do you share our mission and wonder about available opportunities?</p>
+            <p>
+
+                Join our team! We welcome individuals who are passionate about helping educators reach their highest potential. We are a mission-driven organization offering competitive benefits and perks while valuing diverse perspectives.
+            </p>
+
+        </div>
+        <div style="border-top-left-radius:30px;border-bottom-right-radius:40px; color: #fff; background-color: #110045; font-size: 24px; line-height: 33px; padding: 20px 35px 20px 35px; font-weight: 800; display: inline-block; text-decoration: none; cursor: pointer; text-align: center;   transition: all 0.3s; box-sizing: border-box;  max-width: 100%; border: 2px solid #110045;">
+            Find Your Next Job
+        </div>
+    </div>
+</section>
+
+<section style="color: #41326b">
+    <div style="display:flex;justify-content:center; color:#120045">
+        <h1><b>Management Team</b></h1>
+    </div>
+    
+    <div style=" display: flex; gap: 5%; justify-content: space-evenly;">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img style="width :80%" src="https://www.teachingchannel.com/wp-content/uploads/2023/02/mike-smith-le.png" />
+            <p style="font-size:20px"><b>Mike Smith</b></p>
+            <p style="font-size:14px">President</p>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img  style="width :80%" src="https://www.teachingchannel.com/wp-content/uploads/2023/02/wendy-amato-le.png" />
+            <p style="font-size:20px"><b>Wendy Amato</b></p>
+            <p style="font-size:14px">Chief Academic Officer</p>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img style="width :80%" src="https://www.teachingchannel.com/wp-content/uploads/2023/02/jim-hall-le.png" />
+            <p style="font-size:20px"><b>Jim Hall</b></p>
+            <p style="font-size:14px">Chief Executive Officer</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section style="display: flex; margin-top: 5%; color: #41326b;gap:5%;">
+
+    <div style="width:50%;padding:3%">
+        <img style="width:100%;height:100%" src="https://www.teachingchannel.com/wp-content/uploads/2024/02/about-us-cI-placeholder-1.png" />
+
+    </div>
+    <div style="width:50% ">
+        <div style="font-size:40px ;">
+            <p> <span><b>Curriculum & </b><br />Instruction</span></p>
+        </div>
+        <div style="font-size:20px">
+            <p>This seasoned team is comprised of over 100 experienced and practicing educators, each with a Master’s Degree (or higher) and deep expertise in their fields. Our team meticulously develops courses, drawing from seminal texts and resources to ensure the highest quality and most applicable learning for teachers. Course evaluators provide specific feedback on each course module participants complete, solidifying our commitment as your Education Ally.</p>
+
+        </div>
+        <div style="border-top-left-radius:30px;border-bottom-right-radius:40px; color: #fff; background-color: #110045; font-size: 24px; line-height: 33px; padding: 20px 35px 20px 35px; font-weight: 800; display: inline-block; text-decoration: none; cursor: pointer; text-align: center;   transition: all 0.3s; box-sizing: border-box;  max-width: 100%; border: 2px solid #110045;">
+
+            Meet Our Course Writers
+        </div>
+    </div>
+</section>
+
+<section style="display: flex; margin-top: 5%; color: #41326b;gap:5%;text-align:left">
+    <div style="width:50% ">
+        <div style="font-size:40px ;">
+            <p> <span><b>Gold Stars </b><br />for All</span></p>
+        </div>
+        <div style="font-size:20px">
+            <p>This seasoned team is comprised of over 100 experienced and practicing educators, each with a Master’s Degree (or higher) and deep expertise in their fields. Our team meticulously develops courses, drawing from seminal texts and resources to ensure the highest quality and most applicable learning for teachers. Course evaluators provide specific feedback on each course module participants complete, solidifying our commitment as your Education Ally.</p>
+
+        </div>
+        <div style="border-top-left-radius:30px;border-bottom-right-radius:40px; color: #fff; background-color: #110045; font-size: 24px; line-height: 33px; padding: 20px 35px 20px 35px; font-weight: 800; display: inline-block; text-decoration: none; cursor: pointer; text-align: center;   transition: all 0.3s; box-sizing: border-box;  max-width: 100%; border: 2px solid #110045;">
+
+            Read Reviews
+        </div>
+    </div>
+    <div style="width:50%;padding:3%">
+        <img style="border-top-left-radius:20%;border-bottom-right-radius:20%;width:100%;height:100%" src="https://www.teachingchannel.com/wp-content/uploads/2023/02/stock-pexels-christina-morillo-1536x1025.webp" />
+
+    </div>
+
+</section>

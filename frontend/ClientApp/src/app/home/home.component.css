@@ -1,0 +1,90 @@
+.kendo-page-container {
+  padding: 20px;
+}
+
+.photo-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.photo-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.text-section .k-card {
+  margin-bottom: 10px;
+}
+.kendo-page-container {
+  font-family: Arial, sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.shop-courses-btn {
+  background-color: #f90;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-section {
+  background-color: #f7b30c;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content .highlight {
+    font-weight: bold;
+  }
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.text-section {
+  padding: 20px;
+}
+
+  .text-section .k-card {
+    margin-bottom: 20px;
+  }

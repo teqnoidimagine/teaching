@@ -2,6 +2,7 @@
   "dependencies": {
     "@progress/kendo-angular-buttons": "^16.4.0",
     "@progress/kendo-angular-layout": "^16.4.0",
-    "@progress/kendo-theme-default": "^8.2.1"
+    "@progress/kendo-theme-default": "^8.2.1",
+    "jquery": "^3.7.1"
   }
 }
