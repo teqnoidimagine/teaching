@@ -4,55 +4,222 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MVC</title>
+    <style>
+        .no-outline:focus {
+            outline: none;
+        }
+       
+        p {
+            margin-bottom: 0.5rem !important; 
+        }
+        body {
+            font-family: 'Avenir', Arial, Helvetica, sans-serif;
+        }
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
 
-    <!-- Bootstrap CSS -->
+        .custom-radio {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            user-select: none;
+            
+        }
+
+            .custom-radio input[type="radio"] + .radio-mark {
+                position: absolute;
+                top:5px;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                border: 2px solid #110045;
+            }
+
+            .custom-radio input[type="radio"]:checked + .radio-mark {
+                border: 8px solid #F0861F;
+            }
+
+                .custom-radio input[type="radio"]:checked + .radio-mark::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    width:0px;
+                    height: 0px;
+                    border-radius: 50%;
+                    background: white;
+                    transform: translate(-50%, -50%);
+                }
+
+
+        header {
+         
+            margin: 2% 20%;
+        }
+
+        footer {
+            margin: 2% 20%;
+        }
+
+        @@media (max-width: 1468px) {
+            header {
+                margin: 2% 10%;
+            }
+            footer {
+                margin: 2% 10%;
+            }
+
+        }
+    </style>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-    <!-- Kendo UI CSS -->
     <link href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" rel="stylesheet" />
     <link href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default.min.css" rel="stylesheet" />
 
-    <!-- Site CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MVC.styles.css" asp-append-version="true" />
 
-    <!-- jQuery -->
     <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
 
-    <!-- Kendo UI Core JS -->
     <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.ui.core.min.js"></script>
 </head>
-<body style="padding:5% 10%">
+<body >
     <header>
+       
+            @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="font-size:15px;display:flex">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">State Requirements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Professional Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Video Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Resources</a>
+                    </li>
+                </ul>
+                <div style="background-color: #FF8C00; border-color: #FF8C00; color: #110045; padding: 12px 13px; font-size: 12px; border-radius: 20px; font-weight: 700;">SHOP COURSES</div>
+            </div>*@
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC</a>
+              <img src="https://www.teachingchannel.com/wp-content/uploads/2023/01/TC-Logo-with-Learners-Edge-Horizontal.svg" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="font-size:15px">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Courses</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">State Requirements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Professional Development</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Video Platform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Resources</a>
                         </li>
                     </ul>
+                    <div style="background-color: #FF8C00; border-color: #FF8C00; color: #110045; padding: 12px 13px; font-size: 12px; border-radius: 20px; font-weight: 700;">SHOP COURSES</div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="">
+        <main role="main" class="">
             @RenderBody()
         </main>
     </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class=" " style="">
+        <section style="display:flex;justify-content:space-between;align-items:flex-start;gap:3%;margin:5% 0%">
+            <div style="display: flex; flex-direction: column; gap: 10px; width: 20%; align-items: center; justify-content: center ">
+                <img style="width:100%" src="	https://www.teachingchannel.com/wp-content/uploads/2023/01/TC-logo-with-K12-Stacked.svg" />
+                <div style="border-radius:20px; color: #fff; background-color: #110045; font-size: 18px; line-height: 33px; padding: 10px 35px 10px 35px; font-weight: 500; display: inline-block; text-decoration: none; cursor: pointer; text-align: center;   transition: all 0.3s; box-sizing: border-box;  max-width: 100%; border: 2px solid #110045;">
+                    Request a Course Catalog
+                </div>
+            </div>
+            <div style="color:#595959 ">
+                <p>Teaching Channel</p>
+                <p>2805 Dodd Road</p>
+                <p>Suite 200</p>
+                <p>Eagan,MN 55121</p>
+                <p>866-482-2906</p>
+            </div>
+            <div style="color:#595959 ">
+                <p>About us</p>
+                <p>Reviews</p>
+                <p>Partnerships</p>
+                <p>Careers</p>
+                <p>Request a Catalog</p>
+                <p>Contace us</p> <p>Refer a Friend</p>
+            </div> <div style="color:#595959 ">
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Accessibility</p>
+            </div>
+                   <div style="color:#595959 ;font-size:18px">
+                       <p>Newsletter Signup</p>
+                       <form style="display:flex;flex-direction:column;color:#110045;width:90%">
+                           <label class="custom-radio">
+                               <input type="radio" name="example" checked>
+                               <span class="radio-mark"></span>
+                               I am a Teacher or Teacher Leader
+                           </label>
+                           <label class="custom-radio">
+                               <input type="radio" name="example">
+                               <span class="radio-mark"></span>
+                               I am a Districtor School Administraor or Leader
+                           </label>
+                       </form>
+                      
+                       <div style="display:flex;gap:0">
+                           <input class="no-outline" placeholder="Email*" style="padding:16px;background-color:white;border:1px solid lightgray" />
+                           <button style="outline: none; padding: 14px 21px; font-size: 16px; font-weight: 500; border: 1px solid #110045; line-height: 1.438 !important; border-radius: 0 8px 8px 0; margin: 0; background-color: #110045; color: #fff; ">Submit</button>
+                       </div>
+
+                   </div>
+
+        </section>
+
+        <div class="border-top" style="display:flex">
+            <div class="container border-top" style="color: #595959">
+                &copy; 2024 - MVC - <span >
+                    K12 Coalition 2024
+                </span>
+            </div>
+            <div>
+                logos
+            </div>
         </div>
+       
+        <div></div>
     </footer>
 
     <!-- jQuery (local version should be removed if using CDN) -->
